@@ -1,0 +1,24 @@
+<div class="p-fluid">
+    <div class="p-field">
+      <label for="loanAmount">Kwota kredytu</label>
+      <input id="loanAmount" pInputText type="number" [(ngModel)]="loanAmount" />
+    </div>
+    <div class="p-field">
+      <label for="interestRate">Oprocentowanie (%)</label>
+      <input id="interestRate" pInputText type="number" [(ngModel)]="interestRate" />
+    </div>
+    <div class="p-field">
+      <label for="loanDuration">Czas kredytowania (miesiące)</label>
+      <input id="loanDuration" pInputText type="number" [(ngModel)]="loanDuration" />
+    </div>
+    <div class="p-field">
+      <label for="amount">Kwota nadpłaty</label>
+      <input id="amount" pInputText type="number" [(ngModel)]="amount" />
+    </div>
+    <div class="p-field">
+      <label for="frequency">Częstotliwość nadpłat</label>
+      <p-dropdown id="frequency" [options]="[{label: 'Miesięczna', value: 'monthly'}, {label: 'Jednorazowa', value: 'one-time'}]" [(ngModel)]="frequency"></p-dropdown>
+    </div>
+    <button pButton label="Symuluj" icon="pi pi-chart-bar" (click)="simulate()"></button>
+  </div>
+  
