@@ -12,8 +12,6 @@ export interface SimulationResult {
 })
 export class CreditSimulationService {
   calculateStrategy(amount: number, frequency: string, loanAmount: number, interestRate: number, loanDuration: number): SimulationResult {
-    console.log(1);
-    
     // Prosta logika symulacji nadpłaty
     const monthlyRate = interestRate / 12 / 100;
     let totalCost = loanAmount * (1 + monthlyRate * loanDuration);
@@ -23,7 +21,7 @@ export class CreditSimulationService {
 
     if (frequency === 'one-time') {
       totalCost -= amount;
-      savings = amount * monthlyRate * loanDuration / 2; // Prosty przykład
+      savings = amount * monthlyRate * loanDuration / 2;
     } else if (frequency === 'monthly') {
       totalCost -= amount * loanDuration;
       savings = amount * loanDuration * monthlyRate;

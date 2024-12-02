@@ -18,5 +18,9 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'credit-module';
-  simulationResults = [];
+  simulationResults : any = []; 
+
+  handleSimulationResult(result: any) {
+    this.simulationResults.push(result);
+  }
 }

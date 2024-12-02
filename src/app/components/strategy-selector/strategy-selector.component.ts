@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CreditSimulationService, SimulationResult } from '../../services/credit-simulation.service';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
@@ -19,11 +19,19 @@ export class StrategySelectorComponent {
   amount: number = 1000;
   frequency: string = 'monthly';
   simulationResults: SimulationResult[] = [];
+  @Output() simulationResult = new EventEmitter<SimulationResult>(); 
 
   constructor(private creditService: CreditSimulationService) {}
-
-  simulate() {
-    const result = this.creditService.calculateStrategy(this.amount, this.frequency, this.loanAmount, this.interestRate, this.loanDuration);
-    this.simulationResults.push(result);
+ simulate() {
+    const result = this.creditService.calculateStrategy(
+      this.amount,
+      this.frequency,
+      this.loanAmount,
+      this.interestRate,
+      this.loanDuration
+    );
+    this.simulationResult.emit(result);
   }
+
+  
 }
