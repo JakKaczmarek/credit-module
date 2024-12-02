@@ -1,19 +1,18 @@
 <p-table [value]="results">
-    <ng-template pTemplate="header">
-      <tr>
-        <th>Strategia</th>
-        <th>Całkowity koszt</th>
-        <th>Czas (miesiące)</th>
-        <th>Oszczędności</th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-result>
-      <tr>
-        <td>{{ result.strategy }}</td>
-        <td>{{ result.totalCost | currency:'PLN' }}</td>
-        <td>{{ result.totalTime }}</td>
-        <td>{{ result.savings | currency:'PLN' }}</td>
-      </tr>
-    </ng-template>
-  </p-table>
-  
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Częstotliwość</th>
+      <th>Całkowity koszt</th>
+      <th>Czas (miesiące)</th>
+      <th>Oszczędności</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-result>
+    <tr>
+      <td>{{ result.frequency }}</td>
+      <td>{{ result.totalCost | currency: 'PLN' }}</td>
+      <td>{{ result.totalTime }}</td>
+      <td>{{ result.savings | currency: 'PLN' }}</td>
+    </tr>
+  </ng-template>
+</p-table>

@@ -17,8 +17,12 @@
     </div>
     <div class="p-field">
       <label for="frequency">Częstotliwość nadpłat</label>
-      <p-dropdown id="frequency" [options]="[{label: 'Miesięczna', value: 'monthly'}, {label: 'Jednorazowa', value: 'one-time'}]" [(ngModel)]="frequency"></p-dropdown>
-    </div>
+      <p-dropdown id="frequency" [options]="[
+      { label: 'Miesięczna', value: 'Miesięczna' },
+      { label: 'Kwartalna', value: 'Kwartalna' },
+      { label: 'Roczna', value: 'Roczna' },
+      { label: 'Jednorazowa', value: 'Jednorazowa' }
+    ]" [(ngModel)]="frequency"></p-dropdown>    </div>
     <button pButton label="Symuluj" icon="pi pi-chart-bar" (click)="simulate()"></button>
   </div>
   

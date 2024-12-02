@@ -17,7 +17,7 @@ export class StrategySelectorComponent {
   interestRate: number = 5;
   loanDuration: number = 120;
   amount: number = 1000;
-  frequency: string = 'monthly';
+  frequency: string = 'Miesięczna';
   simulationResults: SimulationResult[] = [];
   @Output() simulationResult = new EventEmitter<SimulationResult>(); 
 
