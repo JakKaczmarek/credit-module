@@ -26,3 +26,11 @@
   </div>
   <button pButton label="Symuluj" icon="pi pi-chart-bar" [style]="'margin-top: 20px'" (click)="simulate()"></button>
 </div>
+
+<p-dialog header="Proszę czekać..." [(visible)]="showProgressDialog" [modal]="true" [closable]="false"
+  [draggable]="false" [resizable]="false" [baseZIndex]="10000">
+  <div class="dialog-content">
+    <p-progressSpinner></p-progressSpinner>
+    <p>{{ progressMessage }}</p>
+  </div>
+</p-dialog>
