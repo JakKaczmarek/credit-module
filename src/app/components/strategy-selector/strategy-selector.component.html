@@ -1,28 +1,28 @@
 <div class="p-fluid">
-    <div class="p-field">
-      <label for="loanAmount">Kwota kredytu</label>
-      <input id="loanAmount" pInputText type="number" [(ngModel)]="loanAmount" />
-    </div>
-    <div class="p-field">
-      <label for="interestRate">Oprocentowanie (%)</label>
-      <input id="interestRate" pInputText type="number" [(ngModel)]="interestRate" />
-    </div>
-    <div class="p-field">
-      <label for="loanDuration">Czas kredytowania (miesiące)</label>
-      <input id="loanDuration" pInputText type="number" [(ngModel)]="loanDuration" />
-    </div>
-    <div class="p-field">
-      <label for="amount">Kwota nadpłaty</label>
-      <input id="amount" pInputText type="number" [(ngModel)]="amount" />
-    </div>
-    <div class="p-field">
-      <label for="frequency">Częstotliwość nadpłat</label>
-      <p-dropdown id="frequency" [options]="[
+  <div class="p-field">
+    <label for="loanAmount">Kwota kredytu</label>
+    <input id="loanAmount" pInputText type="number" [(ngModel)]="loanAmount" />
+  </div>
+  <div class="p-field">
+    <label for="interestRate">Oprocentowanie (%)</label>
+    <input id="interestRate" pInputText type="number" [(ngModel)]="interestRate" />
+  </div>
+  <div class="p-field">
+    <label for="loanDuration">Czas kredytowania (miesiące)</label>
+    <input id="loanDuration" pInputText type="number" [(ngModel)]="loanDuration" />
+  </div>StrategySelectorComponent
+  <div class="p-field">
+    <label for="amount">Kwota nadpłaty</label>
+    <input id="amount" pInputText type="number" [(ngModel)]="amount" />
+  </div>
+  <div class="p-field">
+    <label for="frequency">Częstotliwość nadpłat</label>
+    <p-dropdown id="frequency" [options]="[
       { label: 'Miesięczna', value: 'Miesięczna' },
       { label: 'Kwartalna', value: 'Kwartalna' },
       { label: 'Roczna', value: 'Roczna' },
       { label: 'Jednorazowa', value: 'Jednorazowa' }
-    ]" [(ngModel)]="frequency"></p-dropdown>    </div>
-    <button pButton label="Symuluj" icon="pi pi-chart-bar" (click)="simulate()"></button>
+    ]" [(ngModel)]="frequency"></p-dropdown>
   </div>
-  
+  <button pButton label="Symuluj" icon="pi pi-chart-bar" [style]="'margin-top: 20px'" (click)="simulate()"></button>
+</div>

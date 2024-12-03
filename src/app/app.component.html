@@ -1,2 +1,6 @@
-<app-strategy-selector (simulationResult)="handleSimulationResult($event)"></app-strategy-selector>
-<app-simulation-result [results]="simulationResults"></app-simulation-result>
+<app-header></app-header>
+<div class="content">
+    <app-simulation-result [results]="simulationResults"></app-simulation-result>
+    <app-strategy-selector (simulationResult)="handleSimulationResult($event)"></app-strategy-selector>
+</div>
+<app-footer></app-footer>
