@@ -10,9 +10,9 @@
   <ng-template pTemplate="body" let-result>
     <tr>
       <td>{{ result.frequency }}</td>
-      <td>{{ result.totalCost | currency: 'PLN' }}</td>
+      <td>{{ result.totalCost | currency: 'PLN':'symbol-narrow':'1.2-2' }}</td>
       <td>{{ result.totalTime }}</td>
-      <td>{{ result.savings | currency: 'PLN' }}</td>
+      <td>{{ result.savings | currency: 'PLN':'symbol-narrow':'1.2-2' }}</td>
     </tr>
   </ng-template>
 </p-table>

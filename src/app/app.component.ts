@@ -9,11 +9,12 @@ import { SimulationResultComponent } from './components/simulation-result/simula
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { LoginComponent } from './page/login/login.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [StrategySelectorComponent, SimulationResultComponent, FormsModule, DropdownModule, InputTextModule, ButtonModule, TableModule, CommonModule, HeaderComponent, FooterComponent],
+  imports: [StrategySelectorComponent, SimulationResultComponent, FormsModule, DropdownModule, InputTextModule, ButtonModule, TableModule, CommonModule, HeaderComponent, FooterComponent, LoginComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -21,7 +22,13 @@ export class AppComponent {
   title = 'credit-module';
   simulationResults: any = [];
 
+  userLoggedIn: boolean = false;
+
   handleSimulationResult(result: any) {
     this.simulationResults.push(result);
+  }
+
+  onLoggedIn() {
+    this.userLoggedIn = true;
   }
 }
